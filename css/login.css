@@ -49,10 +49,11 @@ body {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    padding: 60px 68px 40px;
+    padding: 60px 70px 40px;
     min-height: 700px;
     min-width: 280px;
-    max-width: 500px;
+    width: 100%;
+    max-width:700px;
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 40px;
@@ -76,7 +77,8 @@ body {
     margin: 10px;
     color: white;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .login__container--remenber-me a {
@@ -91,6 +93,8 @@ body {
 
 .login__container--social-media  div{
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     font-size: 1.4rem;
     margin-bottom: 10px;
