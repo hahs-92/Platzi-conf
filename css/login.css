@@ -172,3 +172,30 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+
+@media(max-width: 768px){
+
+    .header {
+        justify-content: center;
+    }
+
+    .login__container--social-media  div{
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .login__container {
+        padding: 60px 40px 40px;
+    }
+
+}
+
+@media (max-width: 500px){
+    .login__container {
+        padding: 30px 10px 20px;
+    }
+}
