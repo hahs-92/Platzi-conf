@@ -9,15 +9,20 @@ html {
 }
 
 body {
+    font-size: 1.4rem;
+    font-family: 'Mulish', sans-serif;
     background-color: #ab88ff;
 }
 
 /* ---------start -header----------------------------- */
 
 .header {
-    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 25px;
     width: 100%;
     height: 80px;
+    align-items: center;
     /* background-color: #ab88ff; */
 }
 
@@ -28,11 +33,15 @@ body {
 }
 
 .header__menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     text-align: right;
     /* margin-right: 30px; */
+}
+
+.header__menu--profile {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .header__menu--profile img {
@@ -40,12 +49,30 @@ body {
     width: 40px;
 }
 
+.header__menu--profile p {
+    margin: 0;
+    color: white;
+}
+
 .header__menu ul {
     padding: 0;
     position: absolute;
+    right: 14px;
     width: 100px;
     text-align: right;
-    /* display: none; */
+    display: none; 
     list-style: none;
-    /* margin:  0px 0px 0px -14px; */
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
 }
