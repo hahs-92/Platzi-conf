@@ -9,6 +9,7 @@ html {
 }
 
 .carrousel {
+    margin-top: 50px;
     padding: 30px;
     position: relative;
     width: 100%;
@@ -76,3 +77,34 @@ html {
     width: 25px;
 }
 
+.list {
+    background: white;
+}
+
+.trends {
+    background-color: black;
+}
+
+
+/* -----estilos scrool------------- */
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background:rgba(255, 255, 255, .4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar:hover:active {
+    background: #999;
+}
