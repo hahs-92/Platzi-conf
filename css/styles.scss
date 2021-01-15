@@ -1,0 +1,238 @@
+$blanco: white;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Mulish', sans-serif;
+    // background-color: #8f57fd; 
+    background-color: #21c08b; 
+}
+
+
+// -------------clases -----------------
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------start -header----------------------------- */
+
+.header {
+    @include flex;
+    // @extend .flex;
+    // display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 0px 25px;
+    width: 100%;
+    height: 80px;
+    /* background-color: #ab88ff; */
+}
+
+.header img {
+    width: 200px;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+}
+
+.header__menu {
+    text-align: right;
+    /* margin-right: 30px; */
+}
+
+.header__menu--profile {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+.header__menu--profile p {
+    margin: 0;
+    color: white;
+}
+
+.header__menu ul {
+    padding: 0;
+    position: absolute;
+    right: 14px;
+    width: 100px;
+    text-align: right;
+    display: none; 
+    list-style: none;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+/* ------------end header----------------- */
+
+.categories__title {
+    width:100%;
+    color:white;
+    font-size: 1.6rem;
+    position: absolute;
+    padding-left: 30px ;
+}
+
+/* _________start main____________________ */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.main__title {
+    padding: 20px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.input {
+    padding: 0 20px;
+    width: 70%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+
+/* -----------------------------------carrousel----------------------------------- */
+
+.carrousel {
+    margin-top: 50px;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    overflow: scroll;
+}
+
+.carrousel__container {
+    margin: 70px 0;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.carrousel-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: royalblue;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+
+.carrousel-item:hover ~ .carrousel-item{
+    transform: translate3d(100px ,0 ,0);
+}
+
+.carrousel__container:hover .carrousel-item {
+    opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carrousel-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrousel-item__details{
+    padding: 10px;
+    position: absolute;
+    /* top: 0;  */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 1rem;
+    opacity: 0;
+    transition: 450ms opacity;
+    color: white;
+}
+
+.carrousel-item__details:hover {
+    opacity: 1;
+}
+
+.carrousel-item__details img {
+    width: 25px;
+}
+
+.list {
+    background: $blanco;
+}
+
+.trends {
+    background-color: black;
+}
+
+
+/* -----estilos scrool------------- */
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background:rgba(255, 255, 255, .4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar:hover:active {
+    background: #999;
+}
+
