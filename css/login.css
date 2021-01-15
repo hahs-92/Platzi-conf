@@ -174,6 +174,53 @@ body {
 }
 
 
+/* -------------------vista 404---------------------- */
+
+.main__error {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px); /*los 200 son x los 100px del header y 100px del footer*/
+    background: linear-gradient(#21c08b, #ab88ff);
+    color: white;
+}
+
+
+.main__error h1 {
+    font-size: 9rem;
+}
+
+.main__error h2 {
+    font-size: 5rem;
+}
+
+
+/* --------animaciones vista error----------------- */
+
+.animated {
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hinge {
+    0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+    20%, 60% {transform: rotate(80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+    40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+    80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+    100% {transform: translateY(700px);}
+}
+  .hinge {
+    margin: 20px;
+    animation-name: hinge;
+}
+
+
+
+
+
+
 @media(max-width: 768px){
 
     .header {
